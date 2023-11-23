@@ -68,7 +68,7 @@ export default function App() {
           <Link href="/contact" className="mx-auto mt-4">
             <Button
               variant="ghost"
-              className="bg-foreground text-background rounded-full p-2 font-semibold shadow-lg"
+              className="bg-foreground text-background rounded-full p-2 font-semibold shadow-lg hover:bg-cyan-400"
             >
               Say Hello
             </Button>

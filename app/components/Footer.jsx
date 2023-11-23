@@ -55,7 +55,7 @@ const SocialIcons = () => {
 
 export default function Footer() {
   return (
-    <footer className="px-10 mb-4">
+    <footer className="px-10 pb-4">
       <div className="flex flex-col sm:flex-row justify-between sm:items-end">
         <div className="w-full sm:w-1/3 mb-4 sm:mb-0 text-center sm:text-left">
           <p className="text-sm font-light leading-normal text-gray-400">

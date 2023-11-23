@@ -30,7 +30,7 @@ export default function aboutPage() {
   ];
 
   return (
-    <main className="min-h-screen p-4 pt-12 sm:p-12 w-[80%] mx-auto">
+    <main className="min-h-[80vh] p-4 pt-12 sm:p-12 w-[80%] mx-auto">
       <h1 className="mb-12 text-5xl font-black text-foreground text-center">
         About me 👀
       </h1>
@@ -46,8 +46,8 @@ export default function aboutPage() {
               className="underline hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
             >
               Diploma
-            </Link>
-            . in Full Stack Software Development from{" "}
+            </Link>{" "}
+            in Full Stack Software Development from{" "}
             <Link
               href="https://codeinstitute.net/"
               className="underline hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
@@ -76,9 +76,15 @@ export default function aboutPage() {
           <p className="mb-4">
             I'm on an exhilarating journey, bridging technology and creativity.
             If you're looking for a developer with a diverse perspective, a keen
-            eye for detail, and a zest for tackling new challenges, let’s
-            connect and explore how we can collaborate on your next project or
-            simply exchange stories about coding and the great outdoors.
+            eye for detail, and a zest for tackling new challenges,{" "}
+            <Link
+              href="/contact"
+              className="underline hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
+            >
+              let’s connect
+            </Link>{" "}
+            and explore how we can collaborate on your next project or simply
+            exchange stories about coding and the great outdoors.
           </p>
         </div>
 
@@ -90,7 +96,7 @@ export default function aboutPage() {
               <span
                 key={index}
                 style={{ color: stack.color }}
-                className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-sm font-bold shadow-md bg-foreground/40"
+                className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-sm font-bold shadow-md bg-foreground/40 cursor-default"
               >
                 {stack.title}
               </span>
@@ -101,7 +107,7 @@ export default function aboutPage() {
             {interests.map((interest, index) => (
               <span
                 key={index}
-                className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-sm font-bold bg-foreground/30 shadow-md"
+                className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-sm font-bold bg-foreground/30 shadow-md cursor-default"
               >
                 {interest.title} {interest.emoji}
               </span>
