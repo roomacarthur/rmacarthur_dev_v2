@@ -15,6 +15,7 @@ export default async function projectDetail({ params }) {
       <Image
         src={project.feature_image}
         className="h-[300px] mx-auto object-cover"
+        alt={`${project.title} Feature Image.`}
       ></Image>
       <h2>Live Links</h2>
       {project.github_link ? (

@@ -31,6 +31,7 @@ export default async function blogDetail({ params}) {
           src={blog.thumbnail}
           isBlurred={true}
           className="h-[300px] mx-auto object-cover"
+          alt={`${blog.title} by RooMacArthur.dev.`}
         ></Image>
       ) : ("")}
       <div dangerouslySetInnerHTML={{ __html: blog.content }} />
