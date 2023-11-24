@@ -1,12 +1,33 @@
-import { Card } from '@nextui-org/card'
-import React from 'react'
+import { Card } from '@nextui-org/card';
+import { Link } from '@nextui-org/link';
+import React from 'react';
 
-export default function BlogCard() {
+export default function BlogCard({ blog }) {
   return (
-    <Card>
-        <h3>Blog Title</h3>
-        <p>Snippet</p>
-        <p>Date | View count | Read Time</p>
-    </Card>
-  )
+    <Link href={`blog/${blog.slug}`}
+      className='w-full'
+    >
+      <div
+        isPressable={true}
+        className="w-full mt-4 text-foreground hover:bg-foreground/10 p-4 hover:shadow-lg hover:backdrop-blur-lg rounded-lg hover:border-t border-foreground/60"
+      >
+        <h2 className="tracking-wide underline">{blog.title}</h2>
+        <p className="text-left py-4">{blog.snippet}</p>
+        <p className="text-xs font-light text-gray-200 pb-4">
+          Written: {blog.date} | Views: {blog.viewCount} | {blog.readTime}{" "}
+          min Read
+        </p>
+        <div>
+          {blog.tags.map((tag, index) => (
+            <span
+              key={index}
+              className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-xs font-bold bg-teal-400/10 shadow-md cursor-default text-teal-300"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </Link>
+  );
 }

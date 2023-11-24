@@ -2,7 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSquareGithub,
   faLinkedin,
-  faSquareInstagram, faSpotify
+  faSquareInstagram,
+  faSpotify,
 } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 import { Link } from "@nextui-org/link";
@@ -46,7 +47,7 @@ const SocialIcons = () => {
       >
         <FontAwesomeIcon
           icon={social.icon}
-          className="h-8 w-8 text-foreground hover:text-cyan-400 transition mx-4 sm:mx-0 sm:ml-4"
+          className="h-8 w-8 text-foreground hover:text-teal-400 transition mx-4 sm:mx-0 sm:ml-4"
         />
       </Link>
     </div>
@@ -61,7 +62,7 @@ export default function Footer() {
           <p className="text-sm font-light leading-normal text-gray-400">
             Coded in{" "}
             <Link
-              className="hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
+              className="hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
               href="https://code.visualstudio.com/"
             >
               Visual Studio Code
@@ -69,27 +70,27 @@ export default function Footer() {
             , built with{" "}
             <Link
               href="https://nextjs.org/"
-              className="hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
+              className="hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
             >
               Next.js
             </Link>
             ,{" "}
             <Link
-              className="hover:text-cyan-400 text-foreground transition font-semibold foregroundBlur"
+              className="hover:text-teal-400 text-foreground transition font-semibold foregroundBlur"
               href="https://tailwindcss.com/"
             >
               Tailwind CSS
             </Link>{" "}
             and{" "}
             <Link
-              className="hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
+              className="hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
               href="https://www.django-rest-framework.org/"
             >
               Django Rest Framework
             </Link>
             . Deployed on{" "}
             <Link
-              className="hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
+              className="hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
               href="https://www.heroku.com/"
             >
               Heroku
@@ -106,7 +107,7 @@ export default function Footer() {
         © {new Date().getFullYear()}{" "}
         <Link
           href="/"
-          className="hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
+          className="hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
         >
           RooMacArthur.dev
         </Link>

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import {
   Navbar,
@@ -29,8 +29,8 @@ const MenuItems = () => {
         href={item.href}
         className={`${
           pathname === item.href
-            ? "text-4xl sm:text-lg uppercase font-black sm:font-bold my-4 sm:my-1 foregroundBlurDark border-b-2 border-current pb-1"
-            : "text-4xl sm:text-lg uppercase font-black sm:font-semibold my-4 sm:my-1 foregroundBlurDark hover:underline"
+            ? "text-4xl sm:text-lg uppercase font-black sm:font-bold my-4 sm:my-1 foregroundBlurDark text-teal-400"
+            : "text-4xl sm:text-lg uppercase font-black sm:font-semibold my-4 sm:my-1 foregroundBlurDark "
         } `}
       >
         {item.title}
@@ -49,7 +49,7 @@ export default function App() {
     >
       <NavbarBrand justify="start">
         <Link href="/">
-          <h1 className="text-4xl font-black tracking-wide hover:text-cyan-400 transition">
+          <h1 className="text-4xl font-black tracking-wide hover:text-teal-400 transition">
             RM.
           </h1>
         </Link>
@@ -68,7 +68,7 @@ export default function App() {
           <Link href="/contact" className="mx-auto mt-4">
             <Button
               variant="ghost"
-              className="bg-foreground text-background rounded-full p-2 font-semibold shadow-lg hover:bg-cyan-400"
+              className="bg-foreground text-background rounded-full p-2 font-semibold shadow-lg hover:bg-teal-400"
             >
               Say Hello
             </Button>

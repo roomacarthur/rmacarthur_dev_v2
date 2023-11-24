@@ -11,7 +11,7 @@ export default function notFound() {
           We could not find the page you where looking for.{" "}
           <Link
             href="/"
-            className="hover:text-cyan-400 underline text-foreground font-semibold transition foregroundBlur"
+            className="hover:text-teal-400 underline text-foreground font-semibold transition foregroundBlur"
           >
             Navigate Home.
           </Link>

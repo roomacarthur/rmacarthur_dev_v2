@@ -25,8 +25,8 @@ export default function aboutPage() {
     { title: "Photography", emoji: "📷" },
     { title: "Tech", emoji: "📱" },
     { title: "Gaming", emoji: "🎮" },
-    { title: "Finance", emoji: "💰"},
-    { title: "Business", emoji: "👨🏼‍💼"}
+    { title: "Finance", emoji: "💰" },
+    { title: "Business", emoji: "👨🏼‍💼" },
   ];
 
   return (
@@ -43,14 +43,14 @@ export default function aboutPage() {
             by a passion for learning and innovation. Equipped with a{" "}
             <Link
               href="https://www.credential.net/136ea75f-6a6c-4e7d-9b96-185e49407f6e#gs.0qmvah"
-              className="underline hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
+              className="underline hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
             >
               Diploma
             </Link>{" "}
             in Full Stack Software Development from{" "}
             <Link
               href="https://codeinstitute.net/"
-              className="underline hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
+              className="underline hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
             >
               Code Institute
             </Link>
@@ -79,7 +79,7 @@ export default function aboutPage() {
             eye for detail, and a zest for tackling new challenges,{" "}
             <Link
               href="/contact"
-              className="underline hover:text-cyan-400 text-foreground font-semibold transition foregroundBlur"
+              className="underline hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
             >
               let’s connect
             </Link>{" "}
