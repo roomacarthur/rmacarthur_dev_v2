@@ -94,3 +94,12 @@ h2 {
 		
 	}
 }
+
+/* blog code snippets styling  */
+
+pre {
+	background-color: #111827;
+	padding: 10px;
+	border-radius: 15px;
+	margin: 10px 0 10px 0;
+}

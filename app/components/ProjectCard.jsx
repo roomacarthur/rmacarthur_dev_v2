@@ -19,20 +19,22 @@ export default function ProjectCard({ project }) {
           <Image
             alt="Card background"
             className="object-cover rounded-xl"
-            src="/roo.jpg"
+            src={project.feature_image}
             width={270}
             isZoomed={true}
           />
         </CardBody>
         <CardFooter>
-          {project.stack.map((stack, index) => (
-            <span
-              key={index}
-              className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-xs font-bold bg-teal-400/10 shadow-md cursor-default text-teal-300"
-            >
-              {stack}
-            </span>
-          ))}
+          <p>
+            {project.technologies_used.map((stack, index) => (
+              <span
+                key={index}
+                className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-xs font-bold bg-teal-400/10 shadow-md cursor-default text-teal-300"
+              >
+                {stack.name}
+              </span>
+            ))}
+          </p>
         </CardFooter>
       </Card>
     </Link>
