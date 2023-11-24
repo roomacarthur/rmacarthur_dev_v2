@@ -21,53 +21,14 @@ async function getCategories() {
 
 export default async function blogList() {
   // test data.
-  const blogs1 = [
-    {
-      title: "Hello World",
-      snippet:
-        "this is just a small bit of text to represent a small amount of words to be displayed. this is just a small bit of text to represent a small amount of words to be displayed.",
-      date: "10/06/2023",
-      viewCount: "666",
-      readTime: "2",
-      slug: "hello_world",
-      tags: ["HTML", "CSS", "JS"],
-    },
-    {
-      title:
-        "Automate Your File Management: How to Organize Your Downloads Folder with Python",
-      snippet:
-        "this is just a small bit of text to represent a small amount of words to be displayed.",
-      date: "10/11/2023",
-      viewCount: "350",
-      readTime: "7",
-      slug: "test_blog",
-      tags: ["React", "CSS", "JS"],
-    },
-    {
-      title: "test Blog2.",
-      snippet:
-        "this is just a small bit of text to represent a small amount of words to be displayed.",
-      date: "17/11/2023",
-      viewCount: "30k",
-      readTime: "5",
-      slug: "test_blog2",
-      tags: ["Django Rest Framework", "Python", "CSS", "JS"],
-    },
-    {
-      title: "test Blog3.",
-      snippet:
-        "this is just a small bit of text to represent a small amount of words to be displayed.",
-      date: "12/01/2021",
-      viewCount: "35",
-      readTime: "12",
-      slug: "test_blog3",
-      tags: ["HTML", "CSS", "JS"],
-    },
-  ];
 
   const blogs = await getBlogs();
   // Compile all tags and removing duplicates
   const categories = await getCategories();
+  //sort blogs in order of newest to oldest to display newest blog posts at the top.
+  const sortedBlogs = blogs.sort(
+    (a, b) => new Date(b.published_date) - new Date(a.published_date)
+  );
   return (
     <main className="min-h-[80vh] p-4 pt-12 sm:p-12 w-[80%] mx-auto">
       <h1 className="mb-12 text-5xl font-black text-foreground text-center">
@@ -88,7 +49,7 @@ export default async function blogList() {
         <div className="flex flex-col sm:flex-row">
           <div className="sm:w-2/3 sm:pr-4">
             {/* blog posts */}
-            {blogs.map((blog, index) => (
+            {sortedBlogs.map((blog, index) => (
               <BlogCard blog={blog} key={index} />
             ))}
             <PagePagination />

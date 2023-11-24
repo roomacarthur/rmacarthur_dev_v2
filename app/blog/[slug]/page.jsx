@@ -14,14 +14,25 @@ export const metadata = {
 
 export default async function blogDetail({ params}) {
   const blog = await getBlog( params.slug )
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const day = date.getDate();
+    const month = date.toLocaleString("default", { month: "short" });
+    const year = date.getFullYear().toString().substr(-2);
+
+    return `${day} ${month} ${year}`;
+  }
   return (
     <main className="min-h-screen p-4 md:p-12 lg:p-24 w-full mx-auto">
       <h1>{blog.title}</h1>
-      <Image
-        src={blog.thumbnail}
-        isBlurred={true}
-        className="h-[300px] mx-auto object-cover"
-      ></Image>
+      <h2>{formatDate(blog.published_date)}</h2>
+      {blog.thumbnail ? (
+        <Image
+          src={blog.thumbnail}
+          isBlurred={true}
+          className="h-[300px] mx-auto object-cover"
+        ></Image>
+      ) : ("")}
       <div dangerouslySetInnerHTML={{ __html: blog.content }} />
     </main>
   );
