@@ -42,54 +42,61 @@ export default function aboutPage() {
       <div className="flex flex-col sm:flex-row">
         <div className="md:w-2/3 font-light tracking-wide leading-normal sm:pr-4">
           <p className="mb-4 break-normal">
+            {`
             Greetings! I'm Ruairidh MacArthur but most people call me Roo, I'm a
             driven Full Stack Developer, whose journey from the realms of
             business management to the dynamic world of coding has been fueled
-            by a passion for learning and innovation. Equipped with a{" "}
+            by a passion for learning and innovation. Equipped with a `}
             <Link
               href="https://www.credential.net/136ea75f-6a6c-4e7d-9b96-185e49407f6e#gs.0qmvah"
               className="underline hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
             >
               Diploma
-            </Link>{" "}
-            in Full Stack Software Development from{" "}
+            </Link>
+            {` 
+            in Full Stack Software Development from `}
             <Link
               href="https://codeinstitute.net/"
               className="underline hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
             >
               Code Institute
             </Link>
+            {`
             , I've honed my skills in React, Django, and a suite of modern
             technologies, preparing myself to tackle complex web development
-            challenges.
+            challenges.`}
           </p>
           <p className="mb-4">
+            {`
             My background in business management has been instrumental in
             shaping my approach to technology solutions — focusing on user
             experience, efficiency, and the broader business impact. This unique
             blend of business acumen and technical expertise allows me to create
             applications that are not just technically sound but also
-            strategically aligned with business goals.
+            strategically aligned with business goals.`}
           </p>
           <p className="mb-4">
+            {`
             Beyond the world of code, my passion for photography takes me on
             adventures capturing landscapes and nightscapes, while my love for
             the great outdoors keeps me constantly inspired and energized. This
             creative pursuit complements my technical work, bringing a balance
-            of precision and artistry to my projects.
+            of precision and artistry to my projects.`}
           </p>
           <p className="mb-4">
+            {`
             I'm on an exhilarating journey, bridging technology and creativity.
             If you're looking for a developer with a diverse perspective, a keen
-            eye for detail, and a zest for tackling new challenges,{" "}
+            eye for detail, and a zest for tackling new challenges, `}
             <Link
               href="/contact"
               className="underline hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
             >
               let’s connect
-            </Link>{" "}
+            </Link>
+            {` 
             and explore how we can collaborate on your next project or simply
-            exchange stories about coding and the great outdoors.
+            exchange stories about coding and the great outdoors.`}
           </p>
         </div>
 
