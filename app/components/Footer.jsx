@@ -74,19 +74,18 @@ export default function Footer() {
             >
               Next.js
             </Link>
-            ,{" "}
-            <Link
-              className="hover:text-teal-400 text-foreground transition font-semibold foregroundBlur"
-              href="https://tailwindcss.com/"
-            >
-              Tailwind CSS
-            </Link>{" "}
-            and{" "}
+            {" "}and{" "}
             <Link
               className="hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
               href="https://www.django-rest-framework.org/"
             >
               Django Rest Framework
+            </Link>. Styled with{" "}
+            <Link
+              className="hover:text-teal-400 text-foreground transition font-semibold foregroundBlur"
+              href="https://tailwindcss.com/"
+            >
+              Tailwind CSS
             </Link>
             . Deployed on{" "}
             <Link
@@ -95,7 +94,7 @@ export default function Footer() {
             >
               Heroku
             </Link>{" "}
-            by yours truly.🍵
+            with lots of ☕ and 💖 by yours truly.
           </p>
         </div>
         <div className="w-full sm:w-1/4 flex justify-center sm:justify-end">
