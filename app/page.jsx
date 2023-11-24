@@ -12,11 +12,12 @@ export default function Home() {
     <main className="flex flex-col justify-center sm:justify-start items-center h-screen overflow-auto p-4 sm:px-12">
       <h1 className="mb-4">Hello 👋</h1>
       <RooImg />
-      <h2 className="my-4">I'm Ruairidh MacArthur</h2>
+      <h2 className="my-4">{`I'm Ruairidh MacArthur`}</h2>
       <Descriptions />
       <p className="font-light text-center mt-4">
+        {`
         It's Roo for short, originally from Scotland but based in the North
-        East. I build accessible and interesting experiences on the web.
+        East. I build accessible and interesting experiences on the web.`}
       </p>
     </main>
   );

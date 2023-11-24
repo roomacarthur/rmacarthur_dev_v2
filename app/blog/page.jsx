@@ -37,12 +37,12 @@ export default async function blogList() {
       <div>
         <div className="sm:pl-4 pl-0 mb-4">
           <h2>Welcome to my written work.</h2>
-          <p className="font-light">
+          <p className="font-light">{`
             Welcome to my blog – a place where I document my thoughts on
             full-stack development, share insights from my projects, and
             sometimes, just muse about the latest in web technologies. Whether
             you're a fellow developer, a curious learner, or somewhere in
-            between, there's a story here for you.
+            between, there's a story here for you.`}
           </p>
         </div>
         {/* Page Section*/}
