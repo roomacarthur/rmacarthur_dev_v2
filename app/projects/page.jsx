@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
+import HammerEmoji from "../components/HammerEmoji";
 
 export const metadata = {
   title: "RM | Projects",
@@ -27,7 +28,7 @@ export default async function projectsList() {
   return (
     <main className="min-h-screen p-4 pt-12 sm:p-12 w-[80%] mx-auto">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-8 lg:mb-12 text-foreground text-center">
-        Projects 🛠️
+        Projects <HammerEmoji />
       </h1>
       <p className="mb-8 text-center">
         Dive into my portfolio, where each project narrates a story of
@@ -36,7 +37,7 @@ export default async function projectsList() {
         lovers in The WAM, my work reflects a journey of continuous growth and
         exploration.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 justify-items-center">
+      <div className="flex justify-center gap-4 flex-wrap">
         {projects.map((project, index) => (
           <ProjectCard
             project={project}
