@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React, { useState, useEffect } from "react";
 
 export default function Descriptions() {
@@ -62,20 +62,30 @@ export default function Descriptions() {
         }
       `}</style>
 
-      <div className="bg-gray-800/70 pt-1 pl-2 p-4 text-sm shadow-md border-t-5 border-1 flex">
-        <p className="font-mono transition-opacity duration-500 text-teal-300 mb-4">
+      <div className="bg-gray-800/70 shadow-md border-t-4 border-1 rounded-t-none rounded-md overflow-hidden">
+        {/* Taskbar */}
+        <div className="bg-gray-700 flex justify-between items-center p-2">
+          <span className="text-xs text-gray-300">MINGW64:/c/Users/Roo</span>
+          <span className="text-xs text-red-500 cursor-default">✖</span>{" "}
+          {/* Close icon */}
+        </div>
+
+        {/* Terminal Content */}
+        <div className="pt-1 pl-2 p-4 text-sm flex">
+          <p className="font-mono transition-opacity duration-500 text-teal-300 mb-4">
             <span className="text-green-300">Roo@RooMacArthur.dev</span>{" "}
             <span className="text-violet-400">MINGW64</span>{" "}
             <span className="text-yellow-400">~/rmacarthur_dev</span> (main)
-          <br></br>
-          <span className="codeLine">$ git add app/Description.jsx</span>
-          <br></br>
-          <span className="text-green-300">Roo@RooMacArthur.dev</span>{" "}
-          <span className="text-violet-400">MINGW64</span>{" "}
-          <span className="text-yellow-400">~/rmacarthur_dev</span> (main)
-          <br></br>$ git commit -m {displayedText}
-          <span className="cursor">_</span>
-        </p>
+            <br></br>
+            <span className="codeLine">$ git add app/Description.jsx</span>
+            <br></br>
+            <span className="text-green-300">Roo@RooMacArthur.dev</span>{" "}
+            <span className="text-violet-400">MINGW64</span>{" "}
+            <span className="text-yellow-400">~/rmacarthur_dev</span> (main)
+            <br></br>$ git commit -m {displayedText}
+            <span className="cursor">_</span>
+          </p>
+        </div>
       </div>
     </>
   );

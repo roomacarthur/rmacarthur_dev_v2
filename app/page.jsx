@@ -9,7 +9,7 @@ export const metadata = {
 };
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center sm:justify-start items-center min-h-screen overflow-auto p-4 sm:px-12">
+    <main className="flex flex-col justify-center sm:justify-start items-center min-h-screen overflow-auto p-4 sm:px-12 pt-4 sm:pt-12">
       <h1 className="mb-4">
         Hello <WaveEmoji />
       </h1>
