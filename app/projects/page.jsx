@@ -26,16 +26,16 @@ export default async function projectsList() {
   const projects = await getProjects();
   const technologiesMap = await fetchTechnologies();
   return (
-    <main className="min-h-screen p-4 pt-12 sm:p-12 w-[80%] mx-auto">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-8 lg:mb-12 text-foreground text-center">
+    <main className="min-h-screen py-4 pt-12 sm:py-12 w-[80%] mx-auto">
+      <h1 className="font-black mb-8 lg:mb-12 text-foreground text-center">
         Projects <HammerEmoji />
       </h1>
       <p className="mb-8 text-center">
-        Dive into my portfolio, where each project narrates a story of
+        {`Dive into my portfolio, where each project narrates a story of
         challenges, learning, and triumphs. From advocating ocean sustainability
         in SEASTAINABILITY to engineering a dynamic Forum for HiFi and Music
         lovers in The WAM, my work reflects a journey of continuous growth and
-        exploration.
+        exploration.`}
       </p>
       <div className="flex justify-center gap-4 flex-wrap">
         {projects.map((project, index) => (
