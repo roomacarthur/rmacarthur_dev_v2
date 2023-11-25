@@ -37,7 +37,8 @@ export default async function blogList() {
       <div>
         <div className="sm:pl-4 pl-0 mb-4">
           <h2>Welcome to my written work.</h2>
-          <p className="font-light">{`
+          <p className="font-light">
+            {`
             Welcome to my blog – a place where I document my thoughts on
             full-stack development, share insights from my projects, and
             sometimes, just muse about the latest in web technologies. Whether
@@ -55,7 +56,7 @@ export default async function blogList() {
             <PagePagination />
           </div>
           {/* Side bar  */}
-          <div className="sm:w-1/3 mt-8 mb-8 sm:mb-0 sm:mt-4 border-0 rounded-xl bg-foreground/10 backdrop-blur p-4 border-t shadow-lg border-foreground/60">
+          <div className="sm:w-1/3 mt-8 mb-8 sm:mb-0 sm:mt-4 border-0 rounded-xl bg-gray-800/70 backdrop-blur p-4 border-t shadow-lg border-foreground/80">
             <div>
               {/* Search bar */}
               <h2 className="mb-4">Search</h2>
@@ -66,7 +67,10 @@ export default async function blogList() {
               <h2 className="mb-4 mt-4">Categories</h2>
               {/* loop through categories, duplicates are already removed. */}
               {categories.map((category) => (
-                <Link href={`blog/catagories/${category.slug}`} key={category.id}>
+                <Link
+                  href={`blog/catagories/${category.slug}`}
+                  key={category.id}
+                >
                   <span className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-xs font-bold bg-teal-400/10 shadow-md cursor-pointer text-teal-300">
                     {category.name}
                   </span>

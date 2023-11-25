@@ -101,7 +101,7 @@ export default function aboutPage() {
         </div>
 
         {/* Tech stack and interests side bar */}
-        <div className="md:w-1/3 mt-8 mb-8 sm:mb-8 sm:mt-0 border-0 rounded-xl bg-foreground/10 backdrop-blur p-4 shadow-lg">
+        <div className="md:w-1/3 mt-8 mb-8 sm:mb-8 sm:mt-0 border-0 rounded-xl bg-gray-800/70 backdrop-blur p-4 shadow-lg">
           <h2 className="pb-4">Tech Stack</h2>
           <div>
             {techStack.map((stack, index) => (

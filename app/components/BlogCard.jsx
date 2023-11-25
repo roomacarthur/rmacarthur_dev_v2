@@ -13,7 +13,7 @@ export default function BlogCard({ blog }) {
   }
   return (
     <Link href={`blog/${blog.slug}`} className="w-full">
-      <div className="w-full mt-4 text-foreground hover:bg-foreground/10 p-4 hover:shadow-lg hover:backdrop-blur-lg rounded-lg hover:border-t border-foreground/60">
+      <div className="bg-gray-800/80 w-full mt-4 text-foreground hover:bg-foreground/10 p-4 hover:shadow-lg hover:backdrop-blur-lg rounded-lg hover:border-t border-foreground/60 border-t shadow-lg border-foreground/20">
         <h2 className="tracking-wide underline">{blog.title}</h2>
         <p className="text-left py-4">{`${blog.snippet}`}</p>
         <p className="text-xs font-light text-gray-200 pb-4">
