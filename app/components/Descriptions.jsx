@@ -5,7 +5,8 @@ export default function Descriptions() {
   const descriptions = [
     "'Full Stack Developer 💻'",
     "'Photographer 📸'",
-    "'Project Manager'",
+    "'Project Manager 💼'",
+    "'Coffee Lover ☕'",
     "'Carpenter 🪚'",
     "'Tech Enthusiast ⚙️'",
     "'Doggo Lover 🐶'",
