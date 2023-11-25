@@ -10,9 +10,20 @@ async function getProjects() {
   const res = await fetch("https://www.roomacarthur.dev/api/projects/");
   return res.json();
 }
+async function fetchTechnologies() {
+  const response = await fetch(
+    "https://www.roomacarthur.dev/api/technologies/"
+  );
+  const technologies = await response.json();
+  return technologies.reduce((map, tech) => {
+    map[tech.id] = tech.name;
+    return map;
+  }, {});
+}
 
 export default async function projectsList() {
   const projects = await getProjects();
+  const technologiesMap = await fetchTechnologies();
   return (
     <main className="min-h-screen p-4 pt-12 sm:p-12 w-[80%] mx-auto">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-8 lg:mb-12 text-foreground text-center">
@@ -25,9 +36,13 @@ export default async function projectsList() {
         lovers in The WAM, my work reflects a journey of continuous growth and
         exploration.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 justify-items-center">
         {projects.map((project, index) => (
-          <ProjectCard project={project} key={index} />
+          <ProjectCard
+            project={project}
+            key={index}
+            technologiesMap={technologiesMap}
+          />
         ))}
       </div>
     </main>

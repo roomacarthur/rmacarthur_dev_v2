@@ -103,3 +103,7 @@ pre {
 	border-radius: 15px;
 	margin: 10px 0 10px 0;
 }
+
+.codeLine {
+	padding-bottom: 10px;
+}
