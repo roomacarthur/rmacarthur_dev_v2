@@ -34,7 +34,7 @@ export default function aboutPage() {
   ];
 
   return (
-    <main className="min-h-[80vh] px-0 pt-12 sm:p-12 w-[80%] mx-auto">
+    <main className="min-h-[80vh] sm:w-[80%] mx-auto p-4 sm:px-12 pt-4 sm:pt-12">
       <h1 className="mb-12 text-5xl font-black text-foreground text-center">
         About me 👀
       </h1>
@@ -100,7 +100,7 @@ export default function aboutPage() {
         </div>
 
         {/* Tech stack and interests side bar */}
-        <div className="md:w-1/3 mt-8 mb-8 sm:mb-8 sm:mt-0 rounded-xl bg-gray-800/70 backdrop-blur p-4 shadow-lg">
+        <div className="md:w-1/3 mt-8 mb-8 sm:mb-8 sm:mt-0 rounded-xl bg-gray-800/70 p-4 shadow-lg">
           <h2 className="pb-4">Tech Stack</h2>
           <div>
             {techStack.map((stack, index) => (

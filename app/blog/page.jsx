@@ -41,7 +41,7 @@ export default async function blogList() {
     (a, b) => new Date(b.published_date) - new Date(a.published_date)
   );
   return (
-    <main className="min-h-[80vh] p-4 pt-12 sm:p-12 w-[80%] mx-auto">
+    <main className="min-h-screen p-4 pt-12 sm:py-12 sm:w-[80%] mx-auto">
       <h1 className="mb-12 text-5xl font-black text-foreground text-center">
         Blog📝
       </h1>
@@ -67,7 +67,7 @@ export default async function blogList() {
             <PagePagination />
           </div>
           {/* Side bar  */}
-          <aside className="sm:w-1/3 mt-8 mb-8 sm:mb-0 sm:mt-4 rounded-xl bg-gray-800/70 backdrop-blur p-4 ">
+          <aside className="sm:w-1/3 mt-8 mb-8 sm:mb-0 sm:mt-4 rounded-xl bg-gray-800/70 p-4 ">
             <div>
               {/* Search bar */}
               <h2 className="mb-4">Search</h2>

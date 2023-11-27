@@ -25,7 +25,7 @@ export default async function projectsList() {
   const projects = await getProjects();
   const technologiesMap = await fetchTechnologies();
   return (
-    <main className="min-h-screen py-4 pt-12 sm:py-12 w-[80%] mx-auto">
+    <main className="min-h-screen sm:w-[80%] mx-auto p-4 sm:px-12 pt-4 sm:pt-12">
       <h1 className="font-black mb-8 lg:mb-12 text-foreground text-center">
         Projects <HammerEmoji />
       </h1>
