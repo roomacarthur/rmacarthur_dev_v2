@@ -1,4 +1,3 @@
-import PageTitle from "@/app/components/PageTitle";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import { User } from "@nextui-org/react";
@@ -48,10 +47,10 @@ export default async function projectDetail({ params }) {
     <div className="min-h-screen p-4 md:p-12 lg:p-24 mx-auto flex flex-col md:flex-row">
       {/* Main Content */}
       <main className="flex-1 mb-12">
-        <h1 className="text-2xl">{project.title}</h1>
+        <h1 className="mb-2">{project.title}</h1>
         <Image
           src={project.feature_image}
-          className="h-[300px] mx-auto object-cover"
+          className="lg:max-h-[300px] max-w-[100%] rounded-md mx-auto object-cover"
           alt={`${project.title} Feature Image.`}
         ></Image>
 
