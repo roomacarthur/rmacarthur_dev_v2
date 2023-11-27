@@ -1,8 +1,6 @@
 import { Image } from "@nextui-org/image";
 import React from "react";
 import { Link, User } from "@nextui-org/react";
-import PageTitle from "@/app/components/PageTitle";
-import PageMetadata from "@/app/components/PageMetadata";
 
 async function getBlog(slug) {
   const res = await fetch(`https://www.roomacarthur.dev/api/blogs/${slug}`);
@@ -29,11 +27,6 @@ export default async function blogDetail({ params }) {
 
   return (
     <div className="min-h-screen p-4 md:p-12 lg:p-24 mx-auto flex flex-col md:flex-row">
-      <PageTitle title={`${blog.title}`} />
-      <PageMetadata
-        description={blog.meta_description}
-        keywords={blog.meta_keywords}
-      />
       {/* Main Content */}
       <article className="flex-1 mb-12">
         <h1 className="">{blog.title}</h1>

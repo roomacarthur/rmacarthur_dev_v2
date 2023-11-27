@@ -1,8 +1,9 @@
-import { Card } from '@nextui-org/card';
-import { Link } from '@nextui-org/link';
-import React from 'react';
+import { Card } from "@nextui-org/card";
+import { Link } from "@nextui-org/link";
+import React from "react";
+// ... (other imports)
 
-export default function BlogCard({ blog }) {
+export default function BlogCard({ blog, categoriesMap }) {
   function formatDate(dateString) {
     const date = new Date(dateString);
     const day = date.getDate();
@@ -11,26 +12,25 @@ export default function BlogCard({ blog }) {
 
     return `${day} ${month} ${year}`;
   }
+
   return (
     <Link href={`blog/${blog.slug}`} className="w-full">
-      <div className=" w-full mt-4 text-foreground hover:bg-foreground/10 p-4 border-1 rounded-lg shadow-lg">
+      <Card className="w-full mt-4 text-foreground bg-gray-800/70 p-4 rounded-lg shadow-lg">
         <h2 className="tracking-wide underline">{blog.title}</h2>
-        <p className="text-left py-4">{`${blog.snippet}`}</p>
-        <p className="text-xs font-light text-gray-200 pb-4">
-          {`
-          Published: ${formatDate(blog.published_date)} | min Read`}
+        <p className="text-xs font-light text-gray-200 pb-4 mt-2">
+          {`Published: ${formatDate(blog.published_date)}`}
         </p>
         <div>
-          {blog.categories.map((category) => (
+          {blog.categories.map((categoryId, index) => (
             <span
-              key={category.id}
+              key={index}
               className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-xs font-bold bg-teal-400/10 shadow-md cursor-default text-teal-300"
             >
-              {category.name}
+              {categoriesMap[categoryId]}
             </span>
           ))}
         </div>
-      </div>
+      </Card>
     </Link>
   );
 }

@@ -19,12 +19,23 @@ async function getCategories() {
   return res.json();
 }
 
+async function fetchCategories() {
+  const res = await fetch(
+    "https://www.roomacarthur.dev/api/blog_categories/"
+  );
+  const categories = await res.json();
+  return categories.reduce((map, category) => {
+    map[category.id] = category.name;
+    return map;
+  }, {});
+}
 export default async function blogList() {
   // test data.
 
   const blogs = await getBlogs();
   // Compile all tags and removing duplicates
   const categories = await getCategories();
+  const categoriesMap = await fetchCategories();
   //sort blogs in order of newest to oldest to display newest blog posts at the top.
   const sortedBlogs = blogs.sort(
     (a, b) => new Date(b.published_date) - new Date(a.published_date)
@@ -51,12 +62,12 @@ export default async function blogList() {
           <div className="sm:w-2/3 sm:pr-4">
             {/* blog posts */}
             {sortedBlogs.map((blog, index) => (
-              <BlogCard blog={blog} key={index} />
+              <BlogCard blog={blog} key={index} categoriesMap={categoriesMap} />
             ))}
             <PagePagination />
           </div>
           {/* Side bar  */}
-          <div className="sm:w-1/3 mt-8 mb-8 sm:mb-0 sm:mt-4 border-0 rounded-xl bg-gray-800/70 backdrop-blur p-4 border-t shadow-lg border-foreground/80">
+          <aside className="sm:w-1/3 mt-8 mb-8 sm:mb-0 sm:mt-4 rounded-xl bg-gray-800/70 backdrop-blur p-4 ">
             <div>
               {/* Search bar */}
               <h2 className="mb-4">Search</h2>
@@ -77,7 +88,7 @@ export default async function blogList() {
                 </Link>
               ))}
             </div>
-          </div>
+          </aside>
         </div>
       </div>
     </main>
