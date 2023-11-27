@@ -11,8 +11,7 @@ export default function ProjectCard({ project, technologiesMap }) {
     >
       {/* Adjust the width and height as needed */}
       <Card
-        className="bg-gray-800/70 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-500 h-full w-full"
-        isBlurred
+        className="bg-gray-800/70 rounded-md border border-gray-500 h-full w-full"
         isPressable={true}
         rounded="xl"
       >
