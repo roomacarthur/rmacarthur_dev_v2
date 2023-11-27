@@ -47,7 +47,7 @@ export default async function projectDetail({ params }) {
     <div className="min-h-screen p-4 md:p-12 lg:p-24 mx-auto flex flex-col md:flex-row">
       {/* Main Content */}
       <main className="flex-1 mb-12">
-        <h1 className="mb-2">{project.title}</h1>
+        <h1 className="mb-2 md:text-4xl sm:text-3xl text-2xl">{project.title}</h1>
         <Image
           src={project.feature_image}
           className="lg:max-h-[300px] max-w-[100%] rounded-md mx-auto object-cover"
