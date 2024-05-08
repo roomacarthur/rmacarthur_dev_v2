@@ -107,7 +107,7 @@ export default function aboutPage() {
               <span
                 key={index}
                 style={{ color: stack.color }}
-                className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-sm font-bold shadow-md bg-foreground/40 cursor-default"
+                className="inline-block mr-2 mb-2 px-2 py-1 rounded-full text-xs tracking-wide font-bold shadow-md bg-foreground/40 cursor-default"
               >
                 {stack.title}
               </span>
