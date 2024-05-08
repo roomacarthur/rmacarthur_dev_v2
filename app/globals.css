@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 214, 214, 215;
-    --background-rgb: 13, 43, 48;
+  --foreground-rgb: 214, 214, 215;
+  --background-rgb: 13, 43, 48;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -16,7 +16,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb))
+  background: rgb(var(--background-rgb));
 }
 
 h1 {
@@ -32,7 +32,7 @@ h2 {
   text-shadow: 0 0 10px rgba(var(--foreground-rgb), 0.5);
 }
 .foregroundBlurDark {
-  text-shadow: 0 0 10px rgba(0,0,0, 0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .pointerNo {
@@ -40,67 +40,65 @@ h2 {
 }
 
 /* Custom Scrollbar. */
-::-webkit-scrollbar{
-    width: 8px;
-    height: 3px;
-    background-color: rgb(var(--background-rgb));
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+  background-color: rgb(var(--background-rgb));
 }
-::-webkit-scrollbar-thumb{
-    background-color: rgb(var(--foreground-rgb));
-    border-radius: 4px;
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--foreground-rgb));
+  border-radius: 4px;
 }
-
-
 
 @keyframes rotate {
-	100% {
-		transform: rotate(1turn);
-	}
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 .rainbow:hover {
-	position: relative;
-	z-index: 0; 
+  position: relative;
+  z-index: 0;
   border-radius: 15px;
-	overflow: hidden;
-	
-	&::before {
-		content: '';
-		position: absolute;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
     border-radius: 15px;
-		z-index: -2;
-		left: -50%;
-		top: -50%;
-		width: 200%;
-		height: 200%;
-		background-color: #399953;
-		background-repeat: no-repeat;
-		background-size: 50% 50%, 50% 50%;
-		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-		background-image: linear-gradient(#111827, #111827), linear-gradient(#111827, #111827), linear-gradient(#111827, #111827), linear-gradient(#377af5, #377af5);
-		animation: rotate 4s linear infinite;
-	}
-	
-	&::after {
-		content: '';
-		position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #399953;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(#111827, #111827),
+      linear-gradient(#111827, #111827), linear-gradient(#111827, #111827),
+      linear-gradient(#377af5, #377af5);
+    animation: rotate 4s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
     border-radius: 15px;
-		z-index: -1;
-		left: 6px;
-		top: 6px;
-		width: calc(100% - 12px);
-		height: calc(100% - 12px);
-		background: #111827;
-		
-	}
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: #111827;
+  }
 }
 
 /* blog code snippets styling  */
 
-pre {
+/* pre {
 	background-color: #111827;
 	padding: 10px;
 	border-radius: 15px;
 	margin: 10px 0 10px 0;
-}
-
+} */
