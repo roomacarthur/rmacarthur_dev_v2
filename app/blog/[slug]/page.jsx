@@ -1,6 +1,8 @@
 import { Image } from "@nextui-org/image";
 import React from "react";
 import { Link, User } from "@nextui-org/react";
+import { remark } from "remark";
+import html from "remark-html";
 
 async function getBlog(slug) {
   const res = await fetch(`https://www.roomacarthur.dev/api/blogs/${slug}`);
@@ -29,12 +31,12 @@ export default async function blogDetail({ params }) {
     <div className="min-h-screen p-4 md:p-12 lg:p-24 mx-auto flex flex-col md:flex-row">
       {/* Main Content */}
       <article className="flex-1 mb-12">
-        <h1 className="">{blog.title}</h1>
+        <h1 className="test-black mb-8">{blog.title}</h1>
         {blog.thumbnail ? (
           <Image
             src={blog.thumbnail}
             isBlurred={true}
-            className="h-[300px] mx-auto object-cover"
+            className="h-[300px] mx-auto object-cover mb-8"
             alt={`${blog.title} by RooMacArthur.dev.`}
           />
         ) : (
