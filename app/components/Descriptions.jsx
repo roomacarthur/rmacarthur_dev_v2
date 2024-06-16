@@ -1,16 +1,21 @@
-'use client'
-import React, { useState, useEffect } from "react";
+"use client";
+import React, { useState, useEffect, useMemo } from "react";
 
 export default function Descriptions() {
-  const descriptions = [
-    "'Full Stack Developer 💻'",
-    "'Photographer 📸'",
-    "'Project Manager 💼'",
-    "'Coffee Lover ☕'",
-    "'Carpenter 🪚'",
-    "'Tech Enthusiast ⚙️'",
-    "'Doggo Lover 🐶'",
-  ];
+  const descriptions = useMemo(
+    () => [
+      "'Full Stack Developer 💻'",
+      "'Software Tutor 🧑‍🏫'",
+      "'Business Manager 💼'",
+      "'Photographer 📸'",
+      "'Coffee Lover ☕'",
+      "'Carpenter 🪚'",
+      "'Tech Enthusiast ⚙️'",
+      "'Doggo Lover 🐶'",
+    ],
+    []
+  );
+
   const [currentDescription, setCurrentDescription] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
