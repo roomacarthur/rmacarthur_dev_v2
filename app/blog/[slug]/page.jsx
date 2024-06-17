@@ -6,26 +6,51 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ShareButtons from "@/app/components/ShareButtons";
 
-
 async function getBlog(slug) {
-  const res = await fetch(`https://www.roomacarthur.dev/api/blogs/${slug}`, {
-    cache: "no-store",
-  });
-  const data = await res.json();
-  console.log("Fetched blog data:", data); // Log the response to inspect its structure
-  return data;
+  try {
+    const res = await fetch(`https://www.roomacarthur.dev/api/blogs/${slug}`, {
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      throw new Error(`Failed to fetch blog: ${res.statusText}`);
+    }
+    const data = await res.json();
+    console.log("Fetched blog data:", data);
+    return data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 }
 
 async function getCategories() {
-  const res = await fetch("https://www.roomacarthur.dev/api/blog_categories/");
-  const data = await res.json();
-  console.log("Fetched categories data:", data); // Log the response to inspect its structure
-  return data;
+  try {
+    const res = await fetch(
+      "https://www.roomacarthur.dev/api/blog_categories/"
+    );
+    if (!res.ok) {
+      throw new Error(`Failed to fetch categories: ${res.statusText}`);
+    }
+    const data = await res.json();
+    console.log("Fetched categories data:", data);
+    return data;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
 }
 
 export default async function blogDetail({ params }) {
   const blog = await getBlog(params.slug);
   const categories = await getCategories();
+
+  if (!blog) {
+    return <div>Error: Unable to fetch blog data</div>;
+  }
+
+  if (!Array.isArray(categories)) {
+    return <div>Error: Categories data is not an array</div>;
+  }
 
   function formatDate(dateString) {
     const date = new Date(dateString);
@@ -142,8 +167,6 @@ export default async function blogDetail({ params }) {
               </Link>
             ))}
           </div>
-          {/* <h2 className="mt-4 mb-2 font-bold text-lg">Latest Articles</h2> */}
-          {/* Add links to the latest articles here */}
           <h2 className="mt-4 mb-2 font-bold text-lg">Share</h2>
           <ShareButtons shareUrl={shareUrl} title={title} />
         </aside>
