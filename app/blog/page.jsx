@@ -69,7 +69,7 @@ export default function BlogList() {
             between, there is a story here for you.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-4">
           {blogs.map((blog) => (
             <BlogCard key={blog.id} blog={blog} categoriesMap={categoriesMap} />
           ))}

@@ -22,14 +22,14 @@ export default function BlogCard({ blog, categoriesMap }) {
         isPressable
         className="bg-gray-800/70 h-full flex flex-col justify-items-start"
       >
-        <CardBody id="CardBody" className="p-0 flex flex-col max-h-[200px]">
+        <CardBody id="CardBody" className="p-0 flex flex-col max-h-[200px] w-[600px]">
           <Image
             id="CardImage"
             shadow="sm"
             radius="lg"
             width="100%"
             alt={blog.title}
-            className="w-full flex object-cover h-[200px]"
+            className="w-full flex object-cover h-[200px] object-center"
             src={blog.thumbnail}
           />
         </CardBody>
