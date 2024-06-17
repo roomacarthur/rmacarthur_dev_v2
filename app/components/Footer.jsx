@@ -30,12 +30,6 @@ const SocialIcons = () => {
       icon: faSquareInstagram,
       ariaLabel: "Visit my Instagram profile",
     },
-    {
-      title: "Spotify",
-      href: "https://www.instagram.com/thisisroo/",
-      icon: faSpotify,
-      ariaLabel: "Visit my Spotify profile",
-    },
   ];
 
   return socials.map((social, index) => (
@@ -44,6 +38,7 @@ const SocialIcons = () => {
         href={social.href}
         aria-label={social.ariaLabel}
         rel="noopener noreferrer"
+        target="_blank"
       >
         <FontAwesomeIcon
           icon={social.icon}
