@@ -1,7 +1,7 @@
-import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card'
-import { Image } from '@nextui-org/image';
-import { Link } from '@nextui-org/link';
-import React from 'react'
+import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
+import { Image } from "@nextui-org/image";
+import { Link } from "@nextui-org/link";
+import React from "react";
 
 export default function ProjectCard({ project, technologiesMap }) {
   return (
@@ -11,27 +11,26 @@ export default function ProjectCard({ project, technologiesMap }) {
     >
       {/* Adjust the width and height as needed */}
       <Card
-        className="bg-gray-800/70 rounded-md border border-gray-500 h-full w-full"
+        className="bg-gray-800/70 hover:bg-gray-900 rounded-md h-full w-full"
         isPressable={true}
         rounded="xl"
       >
         <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-          <h4 className="font-bold text-large">{project.title}</h4>
+          <h4 className="font-bold text-xl">{project.title}</h4>
         </CardHeader>
         <CardBody className="flex items-center justify-center py-2">
           <Image
             alt={`${project.title} feature image.`}
             className="object-cover rounded-md max-w-[300px]"
             src={project.feature_image}
-            
           />
         </CardBody>
         <CardFooter>
-          <p>
+          <p className="flex flex-wrap">
             {project.technologies_used.map((techId, index) => (
               <span
                 key={index}
-                className="inline-block mr-2 mb-2 px-4 py-1 rounded-full text-xs font-semibold bg-teal-400/10 shadow-md cursor-pointer text-teal-300"
+                className="text-xs tracking-wide me-2 mb-1 px-1.5 py-0.5 rounded-sm bg-teal-100/10 shadow-md cursor-pointer text-foreground hover:text-teal-300"
               >
                 {technologiesMap[techId]}
               </span>
