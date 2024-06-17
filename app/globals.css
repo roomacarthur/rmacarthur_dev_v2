@@ -102,3 +102,98 @@ h2 {
 	border-radius: 15px;
 	margin: 10px 0 10px 0;
 } */
+
+.blogContent {
+  /* max-width: 800px; */
+  /* margin: 0 auto; */
+  padding: 20px;
+  line-height: 1.6;
+  font-family: "Arial", sans-serif;
+}
+
+.blogContent h1,
+.blogContent h2,
+.blogContent h3,
+.blogContent h4,
+.blogContent h5,
+.blogContent h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  line-height: 1.2;
+}
+
+.blogContent p {
+  margin-bottom: 1em;
+  padding: 0 0.5em;
+}
+
+/* .blogContent img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em 0;
+  padding: 0.5em;
+} */
+
+.blogContent ul,
+.blogContent ol {
+  margin: 1em 0;
+  padding: 0 1.5em;
+}
+
+.blogContent ul li,
+.blogContent ol li {
+  margin-bottom: 0.5em;
+}
+
+.blogContent blockquote {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-left: 5px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.blogContent code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.blogContent pre {
+  overflow: auto;
+}
+
+/* .blogContent a {
+  color: #007acc;
+  text-decoration: none;
+  border-bottom: 1px solid #007acc;
+} */
+
+/* .blogContent a:hover {
+  text-decoration: underline;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .blogContent {
+    padding: 10px;
+  }
+
+  .blogContent p {
+    padding: 0;
+  }
+
+  .blogContent ul,
+  .blogContent ol {
+    padding: 0 1em;
+  }
+}
+/* styling for inline `code snippets` */
+.blogContent code {
+  background-color: #282a36 !important;
+  color: #f8f8f2;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+}
