@@ -27,15 +27,17 @@ export default async function projectsList() {
   return (
     <main className="min-h-screen sm:w-[80%] mx-auto p-4 sm:px-12 pt-4 sm:pt-12">
       <h1 className="font-black mb-8 lg:mb-12 text-foreground text-center">
-        Projects <HammerEmoji />
+        PROJECTS <HammerEmoji />
       </h1>
-      <p className="mb-8 text-center">
-        {`Dive into my portfolio, where each project narrates a story of
+      <div className="flex justify-center">
+        <p className="mb-8 text-center w-[80%] flex justify-center">
+          {`Dive into my portfolio, where each project narrates a story of
         challenges, learning, and triumphs. From advocating ocean sustainability
         in SEASTAINABILITY to engineering a dynamic Forum for HiFi and Music
         lovers in The WAM, my work reflects a journey of continuous growth and
         exploration.`}
-      </p>
+        </p>
+      </div>
       <div className="flex justify-center gap-4 flex-wrap">
         {projects.map((project, index) => (
           <ProjectCard

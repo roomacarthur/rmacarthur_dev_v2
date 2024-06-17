@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import { User } from "@nextui-org/react";
@@ -47,7 +48,9 @@ export default async function projectDetail({ params }) {
     <div className="min-h-screen p-4 md:p-12 lg:p-24 mx-auto flex flex-col md:flex-row">
       {/* Main Content */}
       <main className="flex-1 mb-12">
-        <h1 className="mb-2 md:text-4xl sm:text-3xl text-2xl">{project.title}</h1>
+        <h1 className="mb-2 md:text-4xl sm:text-3xl text-2xl">
+          {project.title}
+        </h1>
         <Image
           src={project.feature_image}
           className="lg:max-h-[300px] max-w-[100%] rounded-md mx-auto object-cover"
@@ -114,6 +117,7 @@ export default async function projectDetail({ params }) {
 
         {/* Rest of the main content */}
         <h2 className="mt-6 mb-2">Project Intro</h2>
+        <FontAwesomeIcon icon="fa-solid fa-arrow-turn-down" />
         <p className="font-light mb-4">{project.intro}</p>
         <h2 className="mt-6 mb-2">Project Brief</h2>
         <p className="font-light mb-4">{project.the_brief}</p>
