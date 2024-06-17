@@ -65,8 +65,8 @@ export default function BlogList() {
             Welcome to my blog – a place where I document my thoughts on
             full-stack development, share insights from my projects, and
             sometimes, just muse about the latest in web technologies. Whether
-            you're a fellow developer, a curious learner, or somewhere in
-            between, there's a story here for you.
+            you are a fellow developer, a curious learner, or somewhere in
+            between, there is a story here for you.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-4">
