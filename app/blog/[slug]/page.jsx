@@ -5,6 +5,8 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ShareButtons from "@/app/components/ShareButtons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarDays, faClock } from "@fortawesome/free-solid-svg-icons";
 
 async function getBlog(slug) {
   try {
@@ -85,9 +87,7 @@ export default async function blogDetail({ params }) {
           <div className="flex-1 col px-[20px] xl:hidden my-4 no-css-inherit">
             <User
               name="Ruairidh MacArthur"
-              description={`${formatDate(blog.published_date)} // ${
-                blog.views_count
-              } views // ${blog.read_time} min read`}
+              description={`Published: ${formatDate(blog.published_date)} - ${blog.read_time} min read`}
               avatarProps={{
                 src: "/roo.jpg",
                 radius: "full",
