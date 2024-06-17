@@ -55,7 +55,7 @@ export default function BlogList() {
   }, []);
 
   return (
-    <main className="min-h-screen sm:w-[80%] mx-auto p-4 sm:px-12 pt-4 sm:pt-12">
+    <main className="min-h-screen sm:w-[90%] lg:w-[80%] mx-auto p-4 lg:px-12 pt-4 lg:pt-12">
       <h1 className="mb-12 text-5xl font-black text-foreground text-center">
         Blog📝
       </h1>
@@ -69,7 +69,7 @@ export default function BlogList() {
             between, there is a story here for you.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-4">
           {blogs.map((blog) => (
             <BlogCard key={blog.id} blog={blog} categoriesMap={categoriesMap} />
           ))}
