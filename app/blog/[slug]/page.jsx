@@ -87,7 +87,9 @@ export default async function blogDetail({ params }) {
           <div className="flex-1 col px-[20px] xl:hidden my-4 no-css-inherit">
             <User
               name="Ruairidh MacArthur"
-              description={`Published: ${formatDate(blog.published_date)} - ${blog.read_time} min read`}
+              description={`Published: ${formatDate(blog.published_date)} - ${
+                blog.read_time
+              } min read`}
               avatarProps={{
                 src: "/roo.jpg",
                 radius: "full",
@@ -97,14 +99,12 @@ export default async function blogDetail({ params }) {
             </User>
             <div className="flex flex-wrap my-2">
               {categories.map((category) => (
-                <Link
-                  href={`blog/categories/${category.slug}`}
+                <span
                   key={category.id}
+                  className="text-xs tracking-wide me-2 mb-1 px-1.5 py-0.5 rounded-sm bg-teal-100/10 shadow-md cursor-pointer text-foreground hover:text-teal-300"
                 >
-                  <span className="text-[0.5rem] leading-[0.75rem] tracking-wide me-2 px-1.5 py-0.5 rounded-sm bg-teal-100/10 shadow-md cursor-pointer text-foreground hover:text-teal-300">
-                    {category.name}
-                  </span>
-                </Link>
+                  {category.name}
+                </span>
               ))}
             </div>
             <ShareButtons shareUrl={shareUrl} title={title} />
@@ -160,11 +160,12 @@ export default async function blogDetail({ params }) {
           <h2 className="mb-2 mt-4 font-bold text-lg">Categories</h2>
           <div className="flex flex-wrap">
             {categories.map((category) => (
-              <Link href={`blog/categories/${category.slug}`} key={category.id}>
-                <span className="text-[0.5rem] leading-[0.75rem] tracking-wide me-2 mb-1 px-1.5 py-0.5 rounded-sm bg-teal-100/10 shadow-md cursor-pointer text-foreground hover:text-teal-300">
-                  {category.name}
-                </span>
-              </Link>
+              <span
+                key={category.id}
+                className="text-xs tracking-wide me-2 mb-2 px-1.5 py-0.5 rounded-sm bg-teal-100/10 shadow-md cursor-pointer text-foreground hover:text-teal-300"
+              >
+                {category.name}
+              </span>
             ))}
           </div>
           <h2 className="mt-4 mb-2 font-bold text-lg">Share</h2>
