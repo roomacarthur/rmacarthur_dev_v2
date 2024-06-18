@@ -55,10 +55,11 @@ export default function Footer() {
       <div className="flex flex-col sm:flex-row justify-between sm:items-end">
         <div className="w-full sm:w-1/3 mb-4 sm:mb-0 text-center sm:text-left">
           <p className="text-sm font-light leading-normal text-gray-400">
-            Coded in{" "}
+            Written in{" "}
             <Link
               className="hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
               href="https://code.visualstudio.com/"
+              target="_blank"
             >
               Visual Studio Code
             </Link>
@@ -66,30 +67,35 @@ export default function Footer() {
             <Link
               href="https://nextjs.org/"
               className="hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
+              target="_blank"
             >
               Next.js
-            </Link>
-            {" "}and{" "}
+            </Link>{" "}
+            and{" "}
             <Link
               className="hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
               href="https://www.django-rest-framework.org/"
+              target="_blank"
             >
               Django Rest Framework
-            </Link>. Styled with{" "}
+            </Link>
+            , styled with{" "}
             <Link
               className="hover:text-teal-400 text-foreground transition font-semibold foregroundBlur"
               href="https://tailwindcss.com/"
+              target="_blank"
             >
               Tailwind CSS
-            </Link>
-            . Deployed on{" "}
+            </Link>{" "}
+            and deployed on{" "}
             <Link
               className="hover:text-teal-400 text-foreground font-semibold transition foregroundBlur"
-              href="https://www.heroku.com/"
+              href="https://fly.io/"
+              target="_blank"
             >
-              Heroku
+              Fly.io
             </Link>{" "}
-            with lots of ☕ and 💖 by yours truly.
+            with lots of ☕ and ❤️ by yours truly.
           </p>
         </div>
         <div className="w-full sm:w-1/4 flex justify-center sm:justify-end">
