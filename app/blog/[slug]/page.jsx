@@ -1,12 +1,10 @@
 import { Image } from "@nextui-org/image";
 import React from "react";
-import { Link, User } from "@nextui-org/react";
+import { User } from "@nextui-org/react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ShareButtons from "@/app/components/ShareButtons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarDays, faClock } from "@fortawesome/free-solid-svg-icons";
 
 async function getBlog(slug) {
   try {
@@ -71,7 +69,7 @@ export default async function blogDetail({ params }) {
       <div className="flex flex-col lg:flex-row lg:space-x-8">
         {/* Main Content */}
         <article className="flex-1 mb-12 max-w-[95%] md:max-w-[80%] mx-auto">
-          <h1 className="text-foreground mb-8 text-2xl md:text-4xl font-bold px-[20px] mx-auto max-w-[800px]">
+          <h1 className="text-foreground mb-8 text-2xl md:text-5xl font-black tracking-wide px-[20px] mx-auto max-w-[800px]">
             {blog.title}
           </h1>
           <div className="flex justify-center mb-8">
