@@ -42,6 +42,7 @@ h2 {
 .hover-border-effect {
   position: relative;
   overflow: hidden;
+  z-index: 999;
 }
 
 .hover-border-effect::before {
@@ -54,12 +55,12 @@ h2 {
   border-radius: 14px;
   border: 2px solid transparent;
   transition: all 0.3s ease-in-out;
+  z-index: 999;
 }
 
 .hover-border-effect:hover::before {
   border-color: #38b2ac; /* Adjust the color to match your design */
 }
-
 
 /* Custom Scrollbar. */
 ::-webkit-scrollbar {

@@ -17,7 +17,7 @@ export default function BlogCard({ blog, categoriesMap }) {
       <Card
         shadow="md"
         isPressable
-        className="bg-gray-800/70"
+        className="bg-gray-800/70 hover-border-effect"
       >
         <CardHeader className="p-0">
           <Image
@@ -29,19 +29,19 @@ export default function BlogCard({ blog, categoriesMap }) {
           />
         </CardHeader>
         <CardBody className="p-4 pt-2 flex flex-col text-left">
-            <div className="flex space-x-4 text-[0.6rem] text-muted mb-2">
-              <span className="flex items-center">
-                <FontAwesomeIcon icon={faCalendarDays} className="mr-1" />
-                {formatDate(blog.published_date)}
-              </span>
-              <span className="flex items-center">
-                <FontAwesomeIcon icon={faClock} className="mr-1" />
-                {`${blog.read_time} mins`}
-              </span>
-            </div>
-            <h2 className="text-lg tracking-md font-semibold text-left min-h-[100px]">
-              {blog.title}
-            </h2>
+          <div className="flex space-x-4 text-[0.6rem] text-muted mb-2">
+            <span className="flex items-center">
+              <FontAwesomeIcon icon={faCalendarDays} className="mr-1" />
+              {formatDate(blog.published_date)}
+            </span>
+            <span className="flex items-center">
+              <FontAwesomeIcon icon={faClock} className="mr-1" />
+              {`${blog.read_time} mins`}
+            </span>
+          </div>
+          <h2 className="text-lg tracking-md font-semibold text-left min-h-[100px]">
+            {blog.title}
+          </h2>
         </CardBody>
       </Card>
     </Link>
