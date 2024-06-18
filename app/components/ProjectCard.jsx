@@ -5,24 +5,16 @@ import React from "react";
 
 export default function ProjectCard({ project, technologiesMap }) {
   return (
-    <Link
-      href={`projects/${project.id}`}
-      className="shadow-lg w-[350px] h-[350px] flex items-center justify-center"
-    >
-      {/* Adjust the width and height as needed */}
+    <Link href={`projects/${project.id}`} className="w-full h-full">
       <Card
-        className="bg-gray-800/70 h-full w-full"
+        className="bg-gray-800/70 h-[200px] w-full hover-border-effect"
         isPressable
       >
-        <CardHeader className="pb-0 px-4 flex-col items-center justify-center">
-          <Image
-            alt={`${project.title} feature image.`}
-            className="object-contain rounded-md"
-            src={project.feature_image}
-          />
-        </CardHeader>
-        <CardBody className="flex items-center justify-center py-2">
+        <CardHeader className="p-2">
           <h3 className="font-bold text-2xl">{project.title}</h3>
+        </CardHeader>
+        <CardBody>
+          <p className="text-sm tracking-wide text-balance line-clamp-3 overflow-hidden">{project.intro}</p>
         </CardBody>
         <CardFooter>
           <p className="flex flex-wrap">

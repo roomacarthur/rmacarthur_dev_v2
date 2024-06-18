@@ -10,6 +10,7 @@ async function getProjects() {
   const res = await fetch("https://www.roomacarthur.dev/api/projects/");
   return res.json();
 }
+
 async function fetchTechnologies() {
   const response = await fetch(
     "https://www.roomacarthur.dev/api/technologies/"
@@ -25,8 +26,8 @@ export default async function projectsList() {
   const projects = await getProjects();
   const technologiesMap = await fetchTechnologies();
   return (
-    <main className="min-h-screen sm:w-[80%] mx-auto p-4 sm:px-12 pt-4 sm:pt-12">
-      <h1 className="font-black mb-8 lg:mb-12 text-foreground text-center">
+    <main className="min-h-screen sm:w-[90%] lg:w-[80%] mx-auto p-4 lg:px-12 pt-4 lg:pt-12">
+      <h1 className="mb-12 text-5xl font-black text-foreground text-center">
         PROJECTS <HammerEmoji />
       </h1>
       <div className="flex justify-center">
@@ -38,7 +39,7 @@ export default async function projectsList() {
         exploration.`}
         </p>
       </div>
-      <div className="flex justify-center gap-4 flex-wrap">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-4">
         {projects.map((project, index) => (
           <ProjectCard
             project={project}
