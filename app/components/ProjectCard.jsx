@@ -11,19 +11,18 @@ export default function ProjectCard({ project, technologiesMap }) {
     >
       {/* Adjust the width and height as needed */}
       <Card
-        className="bg-gray-800/70 hover:bg-gray-900 rounded-md h-full w-full"
-        isPressable={true}
-        rounded="xl"
+        className="bg-gray-800/70 h-full w-full"
+        isPressable
       >
-        <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-          <h4 className="font-bold text-xl">{project.title}</h4>
-        </CardHeader>
-        <CardBody className="flex items-center justify-center py-2">
+        <CardHeader className="pb-0 px-4 flex-col items-center justify-center">
           <Image
             alt={`${project.title} feature image.`}
-            className="object-cover rounded-md max-w-[300px]"
+            className="object-contain rounded-md"
             src={project.feature_image}
           />
+        </CardHeader>
+        <CardBody className="flex items-center justify-center py-2">
+          <h3 className="font-bold text-2xl">{project.title}</h3>
         </CardBody>
         <CardFooter>
           <p className="flex flex-wrap">
