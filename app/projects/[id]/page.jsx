@@ -65,7 +65,7 @@ export default async function projectDetail({ params }) {
               <Link
                 href={project.github_link}
                 target="_blank"
-                className="bg-foreground rounded-full p-3 text-background font-semibold hover:bg-teal-400 transition shadow-md mr-2"
+                className="bg-foreground rounded-md p-3 text-background font-semibold hover:bg-teal-400 transition shadow-md mr-2"
               >
                 Git Repo
               </Link>
@@ -74,7 +74,7 @@ export default async function projectDetail({ params }) {
                 href={project.github_link}
                 target="_blank"
                 isDisabled
-                className="bg-foreground rounded-full p-3 text-background font-semibold hover:bg-teal-400 transition shadow-md mr-2"
+                className="bg-foreground rounded-md p-3 text-background font-semibold hover:bg-teal-400 transition shadow-md mr-2"
               >
                 Git Repo
               </Link>
@@ -83,7 +83,7 @@ export default async function projectDetail({ params }) {
               <Link
                 href={project.website_link}
                 target="_blank"
-                className="bg-foreground rounded-full p-3 text-background font-semibold hover:bg-teal-400 transition shadow-md"
+                className="bg-foreground rounded-md p-3 text-background font-semibold hover:bg-teal-400 transition shadow-md"
               >
                 Live Site
               </Link>
@@ -91,7 +91,7 @@ export default async function projectDetail({ params }) {
               <Link
                 target="_blank"
                 isDisabled
-                className="bg-foreground rounded-full p-3 text-background font-semibold transition shadow-md"
+                className="bg-foreground rounded-md p-3 text-background font-semibold transition shadow-md"
               >
                 Live Site
               </Link>
@@ -105,7 +105,7 @@ export default async function projectDetail({ params }) {
               {project.technologies_used.map((techId, index) => (
                 <span
                   key={index}
-                  className="text-xs tracking-wide me-2 mb-2 px-2 py-1 rounded-sm bg-teal-100/10 shadow-md cursor-pointer text-foreground hover:text-teal-300"
+                  className="text-xs tracking-wide me-2 mb-2 px-2 py-1 rounded-sm bg-teal-100/10 shadow-md cursor-default text-foreground"
                 >
                   {technologiesMap[techId]}
                 </span>
