@@ -7,13 +7,15 @@ export const metadata = {
 };
 
 async function getProjects() {
-  const res = await fetch("https://www.roomacarthur.dev/api/projects/");
+  const res = await fetch(
+    "https://roomacarthur-a1177a72bce2.herokuapp.com/api/projects/"
+  );
   return res.json();
 }
 
 async function fetchTechnologies() {
   const response = await fetch(
-    "https://www.roomacarthur.dev/api/technologies/"
+    "https://roomacarthur-a1177a72bce2.herokuapp.com/api/technologies/"
   );
   const technologies = await response.json();
   return technologies.reduce((map, tech) => {
@@ -28,7 +30,7 @@ export default async function projectsList() {
   return (
     <main className="min-h-screen sm:w-[90%] lg:w-[80%] mx-auto p-4 lg:px-12 pt-4 lg:pt-12">
       <h1 className="mb-12 text-5xl font-black text-foreground text-center">
-        PROJECTS <HammerEmoji />
+        Projects <HammerEmoji />
       </h1>
       <div className="flex justify-center">
         <p className="mb-8 text-center w-[80%] flex justify-center">

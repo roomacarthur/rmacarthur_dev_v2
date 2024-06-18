@@ -8,9 +8,12 @@ import ShareButtons from "@/app/components/ShareButtons";
 
 async function getBlog(slug) {
   try {
-    const res = await fetch(`https://www.roomacarthur.dev/api/blogs/${slug}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `https://roomacarthur-a1177a72bce2.herokuapp.com/api/blogs/${slug}`,
+      {
+        cache: "no-store",
+      }
+    );
     if (!res.ok) {
       throw new Error(`Failed to fetch blog: ${res.statusText}`);
     }
@@ -26,7 +29,7 @@ async function getBlog(slug) {
 async function getCategories() {
   try {
     const res = await fetch(
-      "https://www.roomacarthur.dev/api/blog_categories/"
+      "https://roomacarthur-a1177a72bce2.herokuapp.com/api/blog_categories/"
     );
     if (!res.ok) {
       throw new Error(`Failed to fetch categories: ${res.statusText}`);

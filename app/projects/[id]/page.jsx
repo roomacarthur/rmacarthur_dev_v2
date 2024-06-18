@@ -8,13 +8,15 @@ export const metadata = {
 };
 
 async function getProject(id) {
-  const res = await fetch(`https://www.roomacarthur.dev/api/projects/${id}`);
+  const res = await fetch(
+    `https://roomacarthur-a1177a72bce2.herokuapp.com/api/projects/${id}`
+  );
   return res.json();
 }
 
 async function fetchTechnologies() {
   const response = await fetch(
-    "https://www.roomacarthur.dev/api/technologies/"
+    "https://roomacarthur-a1177a72bce2.herokuapp.com/api/technologies/"
   );
   const technologies = await response.json();
   return technologies.reduce((map, tech) => {
@@ -25,7 +27,7 @@ async function fetchTechnologies() {
 
 async function fetchImages() {
   const response = await fetch(
-    "https://www.roomacarthur.dev/api/portfolio_images/"
+    "https://roomacarthur-a1177a72bce2.herokuapp.com/api/portfolio_images/"
   );
   return await response.json();
 }

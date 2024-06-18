@@ -4,7 +4,9 @@ import BlogCard from "../components/BlogCard";
 
 async function fetchBlogs() {
   try {
-    const res = await fetch("https://www.roomacarthur.dev/api/blogs/");
+    const res = await fetch(
+      "https://roomacarthur-a1177a72bce2.herokuapp.com/api/blogs/"
+    );
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
@@ -18,7 +20,7 @@ async function fetchBlogs() {
 async function fetchCategories() {
   try {
     const res = await fetch(
-      "https://www.roomacarthur.dev/api/blog_categories/"
+      "https://roomacarthur-a1177a72bce2.herokuapp.com/api/blog_categories/"
     );
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
