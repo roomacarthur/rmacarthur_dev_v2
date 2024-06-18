@@ -42,7 +42,6 @@ h2 {
 .hover-border-effect {
   position: relative;
   overflow: hidden;
-  z-index: 999;
 }
 
 .hover-border-effect::before {
